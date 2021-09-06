@@ -70,7 +70,7 @@ void create(Node* &root,int prebegin,int preend,int postbegin,int postend) {
 void inorder(Node *root) {
     if(root==NULL)
         return;
-    ans.push_back(root->id);
+    ans.push_back(root->id);                    //此处，不知道为什么改变了root的左右孩子的地址
     inorder(root->lchild);
     inorder(root->rchild);
 }
